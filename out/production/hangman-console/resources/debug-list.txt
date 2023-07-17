@@ -1,0 +1,8 @@
+1) Add an appropriate message informing about incorrect input when user chooses between
+   starting a new game and exiting the program
+2) When user starts a new game, then we have to print the whole guessed word hidden by a mask
+3) When user inputs a letter that is already used, then we have to print an appropriate message and
+   ask to input the letter again
+4) Fix the output of undefined symbols when printing the hangman
+5) When user guesses the word, the program doesn't stop running – fix needed
+6) Add an output of an appropriate message when user wins the game
