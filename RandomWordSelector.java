@@ -11,15 +11,10 @@ public class RandomWordSelector {
         populateWordsArrayFromFile();
     }
 
-    public String getRandomlySelectedWord() {
-        Random random = new Random();
-        return words[random.nextInt(words.length)];
-    }
-
     private void populateWordsArrayFromFile() {
         StringBuilder sb = new StringBuilder();
 
-        try(BufferedReader br = new BufferedReader(new FileReader("resources/words.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("resources/words.txt"))) {
             br.lines().forEach(sb::append);
         } catch (FileNotFoundException ex) {
             System.out.println("File not found!");
@@ -27,7 +22,12 @@ public class RandomWordSelector {
             throw new RuntimeException(e);
         }
 
-        String wordsSeparatedByComma = sb.toString();
-        words = wordsSeparatedByComma.split(", ");
+        String wordsSeparatedByCommaAndSpace = sb.toString();
+        words = wordsSeparatedByCommaAndSpace.split(", ");
+    }
+
+    public String getRandomlySelectedWord() {
+        Random random = new Random();
+        return words[random.nextInt(words.length)];
     }
 }

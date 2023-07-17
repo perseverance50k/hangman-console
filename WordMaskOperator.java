@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -6,70 +7,48 @@ public class WordMaskOperator {
     private String word;
     private String[] mask;
     private final Set<String> usedLetters = new HashSet<>();
+    private final Set<String> wordUniqueLetters = new HashSet<>();
     private int numberOfGuessedLetters = 0;
-
-    public WordMaskOperator() {
-        this.word = null;
-        this.mask = null;
-    }
 
     public void setWord(String word) {
         this.word = word;
-        this.mask = "*".repeat(word.length()).split("");
-        mask = new String[word.length()];
-        Arrays.fill(mask, "*");
-    }
-
-    public WordMaskOperator(String word) {
-        this.word = word;
         this.mask = new String[word.length()];
         Arrays.fill(mask, "*");
+        Collections.addAll(wordUniqueLetters, word.split(""));
     }
 
-    private void updateMask(String letter) {
-        for (int i = 0; i < word.length(); i++) {
-            if (Character.toString(word.charAt(i)).equalsIgnoreCase(letter)) {
-                mask[i] = letter;
-                numberOfGuessedLetters++;
-            }
-        }
-    }
-
-    public void printWordMask(String letter) {
-        updateMask(letter);
+    public void printMask() {
         System.out.println(String.join("", mask));
     }
 
-    public boolean containsLetter(String letter) {
+    public void updateMask(String letter) {
         for (int i = 0; i < word.length(); i++) {
             if (Character.toString(word.charAt(i)).equalsIgnoreCase(letter)) {
-                return true;
+                mask[i] = letter;
             }
         }
+        numberOfGuessedLetters++;
+    }
 
-        return false;
+    public boolean containsLetter(String letter) {
+        return wordUniqueLetters.contains(letter);
     }
 
     public void useUserInputLetter(String letter) {
         usedLetters.add(letter);
     }
 
-    public void clearBuffer() {
-        usedLetters.clear();
-    }
-
     public boolean isLetterAlreadyUsed(String letter) {
         return usedLetters.contains(letter);
     }
 
-    public boolean userWon() {
-        for (String s : mask) {
-            if (s.equals("*")) return false;
-        }
-        return true;
+    public boolean userWon() { // TODO: move this method to the Game class, since it has noting to do with WordMaskOperator
+        return numberOfGuessedLetters == wordUniqueLetters.size();
     }
 
-    public String getWord() {
-        return word;
+    public void clearBuffer() {
+        usedLetters.clear();
+        wordUniqueLetters.clear();
+        numberOfGuessedLetters = 0;
     }
 }

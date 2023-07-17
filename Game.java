@@ -7,8 +7,8 @@ public class Game {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
-        String option = "";
-        int mistakesCount = 0;
+        String option;
+        int mistakesCount;
 
         while (true) {
             System.out.println("Menu: [N]ew game / [E]xit");
@@ -18,11 +18,11 @@ public class Game {
                 mistakesCount = 0;
                 maskOperator.clearBuffer();
                 hangmanDrawer.clearDrawing();
-                String letter = "";
-                maskOperator.setWord(wordSelector.getRandomlySelectedWord());
+                String letter;
+                String guessedWord = wordSelector.getRandomlySelectedWord();
+                maskOperator.setWord(guessedWord);
                 System.out.println("Random word selected!");
-                maskOperator.printWordMask(""); // FIXME: maybe it's not the best decision for printing the initial
-                                                      // FIXME: word hidden by the mask
+                maskOperator.printMask();
 
                 while (!maskOperator.userWon()) {
                     System.out.println("Guess a letter: ");
@@ -35,18 +35,19 @@ public class Game {
                         if (maskOperator.containsLetter(letter)) {
                             System.out.println("You guessed!");
                             System.out.print("Word: ");
-                            maskOperator.printWordMask(letter);
+                            maskOperator.updateMask(letter);
+                            maskOperator.printMask();
                         } else {
                             System.out.println("You didn't guess!");
                             mistakesCount++;
-                            System.out.println("Number of mistakes: " + mistakesCount + "/5");
+                            System.out.printf("Number of mistakes: %s/5\n", mistakesCount);
                             hangmanDrawer.printHangman(mistakesCount);
                         }
                     }
 
                     if (mistakesCount == 5) {
                         System.out.println("You lose!");
-                        System.out.println("The word you had to guess: " + maskOperator.getWord());
+                        System.out.printf("The word you had to guess: %s\n", guessedWord);
                         break;
                     } else if (maskOperator.userWon()) {
                         System.out.println("You won! Congratulations!");

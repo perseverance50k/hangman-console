@@ -1,0 +1,8 @@
+Commit #2:
+
+Refactor: Game, HangmanDrawer, RandomWordSelector, WordMaskOperator classes
+
+1) Optimized the containsLetter() and userWon() methods in the WordMaskOperator class
+2) Moved some business logic from the  WordMaskOperator to the Game class
+3) Enhanced the for() loop inside of the clearDrawing() method of the HangmanDrawer class
+4) Refactor the logic in the start() method of the Game class and reduced it to one structuring convention

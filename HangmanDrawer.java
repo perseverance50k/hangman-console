@@ -54,8 +54,8 @@ public class HangmanDrawer {
     }
 
     public void clearDrawing() {
-        for (int i = 0; i < hangmanDrawingMatrix.length; i++) {
-            Arrays.fill(hangmanDrawingMatrix[i], " ");
+        for (String[] drawingMatrixRow : hangmanDrawingMatrix) {
+            Arrays.fill(drawingMatrixRow, " ");
         }
     }
 }
