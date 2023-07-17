@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="850eef11-f6ef-472c-bc63-4987ba90d4cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/refactor-list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HangmanDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/HangmanDrawer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RandomWordSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/RandomWordSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WordMaskOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordMaskOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hangman-console/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hangman-console/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hangman-console/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hangman-console/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hangman-console/HangmanDrawer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hangman-console/HangmanDrawer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hangman-console/RandomWordSelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hangman-console/RandomWordSelector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hangman-console/WordMaskOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hangman-console/WordMaskOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hangman-console/resources/debug-list.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/sergeychernikov/Documents/Development/workspaces/intellij-workspace/pet-projects/hangman-game/hangman-console",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sergeychernikov/Documents/Development/workspaces/intellij-workspace/pet-projects/hangman-game/hangman-console&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -74,7 +70,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689503774875</updated>
-      <workItem from="1689503776062" duration="9582000" />
+      <workItem from="1689503776062" duration="11042000" />
+      <workItem from="1689580242247" duration="1205000" />
+      <workItem from="1689584349365" duration="849000" />
+      <workItem from="1689585287867" duration="1206000" />
+      <workItem from="1689588737682" duration="58000" />
     </task>
     <servers />
   </component>

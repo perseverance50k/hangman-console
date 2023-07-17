@@ -7,8 +7,7 @@ public class HangmanDrawer {
         clearDrawing();
     }
 
-    public void printHangman(int numberOfMistakes) {
-        updateHangmanDrawingMatrix(numberOfMistakes);
+    public void printHangman() {
         for (String[] drawingMatrixRow : hangmanDrawingMatrix) {
             for (int j = 0; j < drawingMatrixRow.length; j++) {
                 System.out.print(drawingMatrixRow[j]);
@@ -17,7 +16,7 @@ public class HangmanDrawer {
         }
     }
 
-    private void updateHangmanDrawingMatrix(int numberOfMistakes) {
+    public void updateHangmanDrawingMatrix(int numberOfMistakes) {
         switch (numberOfMistakes) {
             case (1) -> {
                 hangmanDrawingMatrix[7][0] = "/";

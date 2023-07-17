@@ -41,7 +41,8 @@ public class Game {
                             System.out.println("You didn't guess!");
                             mistakesCount++;
                             System.out.printf("Number of mistakes: %s/5\n", mistakesCount);
-                            hangmanDrawer.printHangman(mistakesCount);
+                            hangmanDrawer.updateHangmanDrawingMatrix(mistakesCount);
+                            hangmanDrawer.printHangman();
                         }
                     }
 
